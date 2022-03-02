@@ -1,0 +1,28 @@
+body {
+    font-family: 'Bitter', serif;
+    margin: 0;
+    text-align: center;
+    background: green;
+    color: white;
+}
+
+h1 {
+    color: yellow;
+}
+
+button {
+    font-family: inherit;
+    color: green;
+    font-weight: bold;
+    background: yellow;
+    border: none;
+    padding: .5em 1em;
+    margin: 1em;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+button:active,
+button:hover {
+    opacity: .7;
+}
