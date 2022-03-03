@@ -1,0 +1,27 @@
+body{ 
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5em;
+    min-width: 400px;
+}
+
+input {
+    font-size: inherit;
+    width: 95%;
+    padding: .5em 1em;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 3px;
+    padding: .5em 1em;
+}
