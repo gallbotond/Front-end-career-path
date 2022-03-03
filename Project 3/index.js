@@ -6,7 +6,7 @@ let listItems = []
 
 function add() {
     items.push(input.value)
-    listItems += `<li><a href=${items[items.length - 1]}>${items[items.length - 1]}</a></li>`
+    listItems += `<li><a href='${items[items.length - 1]}'>${items[items.length - 1]}</a></li>`
     list.innerHTML = listItems
     input.value = ""
 }
