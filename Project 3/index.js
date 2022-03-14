@@ -28,10 +28,10 @@ function render(array) {
     list.innerHTML = listItems
 }
 
-save.addEventListener("click", () => {
+save.addEventListener("click", function() {
 
     // console.log(getCurrentTab())
-    chrome.tabs.query({active: true, currrentWindow: true}, (tabs) => {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         items.push(tabs[0].url)
         localStorage.setItem("links", JSON.stringify(items))
         render(items)

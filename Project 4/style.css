@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 350px;
+    height: 100vh;
+    align-items: center;
+}
+
+main {
+    background-color: white;
+    padding: 2em;
+    box-shadow: 0 0 10px;
+    text-align: center;
+    min-width: 250px;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    text-align: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 4em;
+    background-color: rgb(255, 168, 137);
+    border-radius: 10px;
+    margin: 0 auto .5em;
+}
+
+.highlight {
+    background-color: rgb(255, 204, 185);
+    box-shadow: 0 0 10px grey;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+button {
+    background-color: brown;
+    color: white;
+    font-family: inherit;
+    font-size: 2em;
+    border: none;
+    border-radius: 5px;
+    padding: .2em .5em;
+    box-shadow: 0 0 10px grey;
+    margin: auto;
+}
+
+#reset-button {
+    display: none;
+}
+
+button:active, 
+button:hover {
+    opacity: .8;
+}
