@@ -12,8 +12,16 @@ body{
 }
 
 .tile {
-    background-color: aquamarine;
+    background-color: rgb(194, 255, 235);
     border: 1px solid white;
     width: 20px;
     height: 20px;
+}
+
+.snake {
+    background-color: gray;
+}
+
+.apple {
+    background-color: brown;
 }
