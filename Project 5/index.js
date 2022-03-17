@@ -52,6 +52,7 @@ function move() {
         (currentSnake[0] % width === width - 1 && direction === 1) ||
         gridElments[currentSnake[0] + direction].classList.contains("snake")
     ) {
+        scoreText.textContent = score + ", Game Over!"
         return clearInterval(timer)
     }
 
