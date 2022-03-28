@@ -1,6 +1,7 @@
 html, body {
     margin: 10;
     padding: 10;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .grid {
@@ -61,4 +62,20 @@ html, body {
 
 .scared {
     background-color: aqua;
+}
+
+button {
+    font-family: inherit;
+    margin: 1em;
+    padding: .5em 1em;
+    border: 3px solid black;
+    color: aliceblue;
+    background-color: rebeccapurple;
+    transform: scale(1);
+}
+
+button:hover, 
+button:active {
+    opacity: .8;
+    transform: scale(1.1);
 }

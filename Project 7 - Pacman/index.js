@@ -111,7 +111,8 @@ function control(e) {
     squares[currentPacmanIndex].classList.add("pacman")
     pointEaten()
     powerPelletEaten()
-    console.log(ghosts[0].isScared)
+    checkGameOver()
+    checkGameWon()
 }
 
 document.addEventListener('keydown', control)
@@ -179,9 +180,6 @@ function moveGhosts(ghost) {
 
             squares[ghost.currentIndex].classList.add(ghost.name, 'ghost');
          }
-
-         checkGameOver()
-
     }, ghost.speed)
 }
 
@@ -200,9 +198,27 @@ function unScareGhosts() {
 }
 
 function checkGameOver() {
-     if(squares[currentPacmanIndex].classList.contains('ghost') && !square[currentPacmanIndex].classList.contains('scared')) {
+     if(squares[currentPacmanIndex].classList.contains('ghost') && !squares[currentPacmanIndex].classList.contains('scared')) {
          ghosts.forEach((ghost) => clearInterval(ghost.timerID))
          document.removeEventListener('keydown', control)
-         scoreText.textContent = 'Game Over'
+         scoreText.textContent = score + ', Game Over'
+         console.log('game over')
      }
+}
+
+function checkGameWon() {
+    if(score === 374) {
+        scoreText.textContent = score + ', You Won!'
+        ghosts.map(ghost => clearInterval(ghost.timerID))
+        document.removeEventListener('keydown', control)
+        console.log('game won')
+    }
+}
+
+function restartGame() {
+    // createBoard()
+    // document.addEventListener('keydown', control)
+    // currentPacmanIndex = 490
+    // score = 0
+    // ghosts.map(ghost => squares[ghost.startIndex].classList.add(ghost.name, 'ghost'))
 }
