@@ -124,8 +124,6 @@ function pointEaten() {
     }
 }
 
-powerPelletEaten()
-
 class Ghost {
     constructor(name, speed, startIndex) {
         this.name = name
@@ -160,25 +158,51 @@ function moveGhosts(ghost) {
             !squares[ghost.currentIndex + direction].classList.contains("wall")
             && !squares[ghost.currentIndex + direction].classList.contains("ghost")
         ) {
-            squares[ghost.currentIndex].classList.remove(ghost.name, "ghost", "scared-ghost")
+            squares[ghost.currentIndex].classList.remove(ghost.name, "ghost", "scared")
             ghost.currentIndex += direction
             squares[ghost.currentIndex].classList.add(ghost.name, "ghost")
         }
         else {
             direction = directions[Math.floor(Math.random() * directions.length)]
         }
+
         if(ghost.isScared) {
             squares[ghost.currentIndex].classList.add('scared')
         }
+
+         if(ghost.isScared && squares[ghost.currentIndex].classList.contains('pacman')) {
+             squares[currentPacmanIndex].classList.remove(ghost.name, 'scared', 'ghost')
+
+             score += 100
+
+             ghost.currentIndex = ghost.startIndex
+
+            squares[ghost.currentIndex].classList.add(ghost.name, 'ghost');
+         }
+
+         checkGameOver()
+
     }, ghost.speed)
 }
 
 function powerPelletEaten() {
     if(squares[currentPacmanIndex].classList.contains("power-pellet")) {
+        console.log('eaten power pellet')
         squares[currentPacmanIndex].classList.remove("power-pellet")
         score += 10;
         ghosts.forEach(ghost => ghost.isScared = true)
-        setInterval(ghosts.map(ghost => ghost.isScared = false), 10000)
+        setInterval(unScareGhosts, 10000)
     }
 }
 
+function unScareGhosts() {
+    ghosts.map(ghost => ghost.isScared = false)
+}
+
+function checkGameOver() {
+     if(squares[currentPacmanIndex].classList.contains('ghost') && !square[currentPacmanIndex].classList.contains('scared')) {
+         ghosts.forEach((ghost) => clearInterval(ghost.timerID))
+         document.removeEventListener('keydown', control)
+         scoreText.textContent = 'Game Over'
+     }
+}
