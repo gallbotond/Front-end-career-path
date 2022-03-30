@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 1em;
+}
+
+main {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+hr {
+    margin: 2em 0;
+}
+
+hr:last-child {
+    display: none;
+}
