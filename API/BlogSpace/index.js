@@ -10,6 +10,5 @@ fetch('https://apis.scrimba.com/jsonplaceholder/posts')
             <hr>
         `)
         main.innerHTML = html
-        console.log(main)
     })
 
