@@ -1,6 +1,12 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    height: 100vh;
 }
 
 main {
@@ -16,12 +22,10 @@ hr:last-child {
     display: none;
 }
 
-h2:first-child {
-    margin-top: 4em;
-}
-
 nav {
+    padding: 5px;
     position: fixed;
+    top: 0;
     background-color: aliceblue;
     width: 100%;
     margin: 0;
@@ -42,6 +46,22 @@ li {
     justify-content: center;
 }
 
-body {
-    margin-top: 0;
+a {
+    color: rgb(2, 171, 228);
+}
+
+form {
+    margin-top: 75px;
+    background-color: lightblue;
+    padding: 1em;
+    text-align: center;
+}
+
+form > * {
+    margin: 0 auto;
+}
+
+form > button {
+    width: min-content;
+    min-width: auto;
 }
