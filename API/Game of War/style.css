@@ -43,7 +43,7 @@ img {
 
 .placeholder {
     border: 2px solid wheat;
-    width: 140px;
+    width: calc(195px * 5/7);
     height: 195px;
     margin: 1em;
     border-radius: 10px;
