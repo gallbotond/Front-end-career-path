@@ -1,9 +1,12 @@
 let deckId = ''
 let remaining = true
-let drawCount = 7
+let drawCount = 2
 
 const drawBtn = document.getElementById('draw-button')
 const imageHolder = document.getElementById('image-holder')
+const dataBtn = document.getElementById('data-button')
+
+drawBtn.classList.add('blocked')
 
 const fetchData = () => {
     fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
@@ -11,14 +14,10 @@ const fetchData = () => {
         .then(data => {
             deckId = data.deck_id
             console.log(deckId)
-            if(deckId && remaining) {
-                drawBtn.style.display = "block"
-            }
+            drawBtn.style.display = "block"
+            drawBtn.addEventListener('click', drawCard)
+            drawBtn.classList.remove('blocked')
         })
-}
-
-const logger = () => {
-    console.log("I finally ran!")
 }
 
 const drawCard = () => {
@@ -27,21 +26,28 @@ const drawCard = () => {
         .then(data => {
             console.log(data)
             cardImages = ''
-            data.cards.map(card => cardImages += `<img src=${card.image} alt="poker card" />`)
+            data.cards.map(card => cardImages += `<img src=${card.image} alt="poker card" /><br>`)
             imageHolder.innerHTML = cardImages
             if(data.remaining <= 0 || drawCount > data.remaining)
             {
                 remaining = false
-                drawBtn.style.display = "none"
-                return
+                drawBtn.classList.add('blocked')
+                drawBtn.removeEventListener('click', drawCard)
+                imageHolder.innerHTML = `
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                `
             }
         })
 }
 
-document.getElementById('data-button').addEventListener('click', fetchData)
-setTimeout(logger, 2000)
+dataBtn.addEventListener('click', fetchData)
 
-drawBtn.addEventListener('click', drawCard)
+// setTimeout(logger, 2000)
+
+// const logger = () => {
+//     console.log("I finally ran!")
+// }
 
 // const people = [
 //     { name: 'Jack', hasPet: true },
