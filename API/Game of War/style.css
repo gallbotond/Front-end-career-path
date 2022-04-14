@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    min-height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,9 +37,18 @@ h2 {
     margin: 0 auto;
 }
 
+h3 {
+    margin: 1em;
+}
+
 img {
     margin: 1em;
     max-width: 140px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .placeholder {
