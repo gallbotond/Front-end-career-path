@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Baloo 2', cursive;
+    color: whitesmoke;
+    text-shadow: 0 0 5px #6e6e6e;
+
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1, h2, h3 {
+    margin: 1em;
+}
+
+h1 {
+    opacity: .8;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#main-quote {
+    grid-column: -1 / 1;
+}
