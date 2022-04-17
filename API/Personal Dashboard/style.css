@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: 'Baloo 2', cursive;
     color: whitesmoke;
-    text-shadow: 0 0 5px #6e6e6e;
+    text-shadow: 0 0 5px #3a3a3a;
 
     background: no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -19,12 +19,12 @@ body {
     justify-content: space-between;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, p {
     margin: 1em;
 }
 
-h1 {
-    opacity: .8;
+p {
+    opacity: .85;
 }
 
 .container {
@@ -32,6 +32,45 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-#main-quote {
+.quote-container {
     grid-column: -1 / 1;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#main-quote {
+    margin: 0 1em;
+}
+
+#quote-author {
+    text-align: right;
+    margin: 0 1em;
+}
+
+#location, #weather {
+    grid-column: 3;
+    text-align: right;
+}
+
+#weather {
+    margin: 1em 1em 0 auto;
+    width: max-content;
+    font-weight: bold;
+}
+
+#time {
+    margin: 0;
+    font-size: 5em;
+}
+
+#crypto-info {
+    width: fit-content;
+    line-height: 0.4;
+    margin-bottom: -10em;
+    font-weight: bold;
+}
+
+#crypto-info > * {
+    opacity: 1;
 }
