@@ -9,5 +9,5 @@
     "chrome_url_overrides": {
         "newtab": "index.html"
     },
-    "icons": { "128": "icon.png" }
+    "icons": { "474": "icon.png" }
 }
