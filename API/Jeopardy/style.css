@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: lightgreen;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100vh;
+}
+
+#board > * {
+    border: .1rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+#category-title {
+    background-color: lightblue;
+    grid-row-start: 1;
+    font-weight: bold;
+}
+
+#category-clue {
+    font-size: 3em;
+}
