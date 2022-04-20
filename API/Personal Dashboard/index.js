@@ -60,7 +60,7 @@ function success(pos) {
     // console.log(`Longitude: ${crd.longitude}`);
     // console.log(`More or less ${crd.accuracy} meters.`);
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&units=metric&appid=d614dee4a1b71743f1b961cf0ebb583f`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&units=metric&appid=${config.OPENWEATHER_KEY}`)
         .then(res => res.ok ? res.json() : Error())
         .then(data => {
             // console.log(data)
