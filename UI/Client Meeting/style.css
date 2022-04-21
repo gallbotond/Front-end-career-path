@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: rgb(58, 58, 58);
+    color: rgb(255, 255, 255);
+    /* text-align: center; */
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.3em;
+    margin-top: 0;
+    color: orangered;
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+    position: relative;
+    color: rgb(58, 58, 58);
+    font-size: .5em;
+    background-color: rgb(255, 177, 103);
+    padding: .2em .4em;
+    border: 3px solid orangered;
+    border-radius: 1em;
+    display: inline-block;
+}
+/* 
+span:before {
+    position: absolute;
+    content: '';
+    height: .2em;
+    width: 100%;
+    bottom: .1em;
+    z-index: -1;
+    background: orangered;
+} */
+
+span:before {
+    content: '1:30 PM';
+    font-size: 15em;
+    position: absolute;
+    color: rgb(87, 87, 87);
+    z-index: -1;
+    white-space: nowrap;
+    left: 10%;
+    top: 55%;
+}
+
+p {
+    font-size: 1.2em;
+    padding-left: 2em;
+    border-left: 4px solid orangered;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 75%;
+}
