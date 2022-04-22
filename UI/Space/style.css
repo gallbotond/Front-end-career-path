@@ -7,9 +7,9 @@ body {
     padding: 0;
     font-family: 'Raleway', sans-serif;
     display: grid;
-    place-content: center;
+    align-items: center;
     height: 100vh;
-    background: linear-gradient(0deg, rgb(34, 34, 34) 32%, rgba(28, 28, 28) 32%, rgb(28, 28, 28) 32%, rgba(28, 28, 28) 100%);
+    background: linear-gradient(322deg, rgb(0, 196, 196) 29%, rgb(28, 28, 28) 29%, rgb(28, 28, 28) 39.9%, rgb(0, 196, 196) 40%, rgb(0, 196, 196) 47.9%, rgb(28, 28, 28) 48%, rgb(28, 28, 28) 91.9%, rgb(0, 196, 196) 92%, rgb(0, 196, 196) 100%);
     color: whitesmoke;
     /* text-align: center; */
 }
@@ -33,4 +33,10 @@ span::before {
 p {
     text-transform: uppercase;
     font-size: 1.2em;
+}
+
+.container {
+    width: 40%;
+    margin-left: 4em;
+    height: 50vh;
 }
