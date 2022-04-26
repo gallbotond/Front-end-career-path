@@ -146,12 +146,156 @@ nav {
     background-color: #2c354a;
 }
 
-.panel {
+main {
+    border: unset;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+a.cta-btn {
+    font-size: .9em;
+    padding: .2em .4em;
+    border-radius: .2em;
+}
+
+nav ul li a {
+    font-size: 1.2em;
+    padding: .8em 1em;
+}
+
+h3 {
+    font-size: unset;
+}
+
+nav {
+    text-align: left;
+}
+
+.inner-wrapper {
     padding: 1em;
+}
+
+.panel {
+    padding: .5em 1em;
     margin-bottom: 2em;
 }
 
-li p {
-    font-size: .2em;
+/* Large phones */
+
+@media (min-width: 420px) {
+    body {
+        padding: 1em;
+        text-align: left;
+    }
+
+    ul.data {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.data li {
+        flex: 0 0 50%;
+    }
+
+    nav {
+        width: 50%;
+    }
 }
 
+@media (min-width: 690px) {
+    ul.data {
+        justify-content: center;
+    }
+
+    .panel ul.data li {
+        flex: 0 0 33%;
+    }
+
+    .panel ul.data li p {
+        margin-bottom: 0;
+    }
+
+    nav {
+        width: 30%;
+    }
+}
+
+@media (min-width: 750px) {
+    body {
+        padding: 1.5em;
+    }
+
+    .columns {
+        display: flex;
+    }
+
+    .col {
+        flex: 0 0 48%;
+    }
+
+    .secondary {
+        margin-left: 3em;
+    }
+
+    ul.secondary {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-rows: 70px auto;
+        grid-template-areas: 
+            "sidebar header"
+            "sidebar main"
+            ;
+        padding: 0;
+    }
+
+    header, main {
+        padding: 1.5rem;
+    }
+
+    nav {
+        grid-area: sidebar;
+        opacity: 1;
+        visibility: unset;
+        transform: translateX(0);
+        position: unset;
+        width: 100%;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    a.logo {
+        margin: 0;
+    }
+
+    svg {
+        display: none;
+    }
+} 
+
+/*
+white space
+color
+contrast
+scale
+alignment
+typography
+visual hierarchy
+*/
