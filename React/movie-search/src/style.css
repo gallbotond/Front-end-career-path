@@ -31,3 +31,41 @@ small {
     font-size: 4.4em;
     text-align: center;
 }
+
+.form {
+    display: grid;
+}
+
+.form > * {
+    margin: .2em;
+    font-family: inherit;
+}
+
+.label {
+    font-size: 1.2rem;
+    margin-bottom: .2rem;
+    text-transform: uppercase;
+    opacity: .7;
+    font-weight: bold;
+}
+
+.input,
+.button {
+    padding: .5em 1em;
+    border: 2px solid gray;
+    border-radius: 2em;
+}
+
+.button {
+    color: whitesmoke;
+    background-color: gray;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .2s;
+}
+
+.button:hover, 
+.button:active {
+    background-color: rgb(31, 31, 31);
+    border: 2px solid rgb(31, 31, 31);
+}

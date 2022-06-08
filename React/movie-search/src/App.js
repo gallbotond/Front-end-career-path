@@ -25,6 +25,8 @@ import SearchMovie from './components/SearchMovie';
 // }
 
 class App extends React.Component {
+  
+
   render() {
     return (
       <div className='container'>
