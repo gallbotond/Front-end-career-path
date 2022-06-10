@@ -6,3 +6,5 @@ export default function HOC(component) {
         <Component favNum={randomNum} {...props} />
     }
 }
+
+// Higher Order Component

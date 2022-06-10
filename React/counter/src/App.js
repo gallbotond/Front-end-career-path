@@ -26,7 +26,9 @@ export default function App() {
         </form>
       </CTA>
 
-
+      <CTA>
+        <p>lorem ipsum</p>
+      </CTA>
     </>
   );
 }
