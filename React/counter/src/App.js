@@ -1,8 +1,11 @@
 import CTA from './components/CTA'
 import {HOC} from './components/HOC'
+import {ExtraProp} from './components/ExtraProp'
+import {FavNum} from './components/FavNum'
 
-function App() {
-  // console.log(props)
+/*
+function App(props) {
+  console.log(props)
 
   return (
     <>
@@ -14,7 +17,7 @@ function App() {
         </p>
       </CTA>
 
-      <CTA position="right"> {/* does nothing */}
+      <CTA position="right">
         <p>
           Note that the development build is not optimized.
           To create a production build, use npm run build. 
@@ -33,4 +36,16 @@ function App() {
   );
 }
 
-export default HOC(App)
+export default ExtraProp(App)
+*/
+
+function App(props) {
+
+  console.log(props)
+
+  return(
+    <h1>Hello {props.number}</h1>
+  )
+}
+
+export default FavNum(App)
