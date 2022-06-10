@@ -1,7 +1,7 @@
 import CTA from './components/CTA'
-import HOC from './components/HOC'
+import {HOC} from './components/HOC'
 
-export default function App() {
+function App() {
   // console.log(props)
 
   return (
@@ -33,5 +33,4 @@ export default function App() {
   );
 }
 
-// const NumComponent = HOC(App)
-// export default NumComponent;
+export default HOC(App)
