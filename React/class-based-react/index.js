@@ -47,7 +47,8 @@ class MyApp extends React.Component {
 
 class App extends React.Component {
     state = {
-        go: "yes"
+        go: "yes",
+        character: {}
     }
 
     toggleGo = () => {
@@ -58,10 +59,22 @@ class App extends React.Component {
         })
     }
 
+    componentDidMount() {
+        console.log("componentDidMount")
+
+        fetch("https://swapi.dev/api/people/1")
+            .then(res => res.json())
+            .then(data => {
+                this.setState({character: data})
+            })
+    }
+
+
     render() {
+        console.log("render")
         return(
             <>
-                <h1>Go out?</h1>
+                <h1>Go out with {this.state.character.name}?</h1>
                 <div onClick={this.toggleGo}>
                     <h2>{this.state.go}</h2>
                 </div>
@@ -71,16 +84,20 @@ class App extends React.Component {
 }
 
 class Counter extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            count: 0
+        }
+        this.add = this.add.bind(this)
+        this.sub = this.sub.bind(this)
+    }
     state = {
         count: 0
     }
 
     add = () => {
-        this.setState(prevState => {
-            return {
-                count: prevState.count + 1
-            }
-        })
+        this.setState(prevState => ({count: prevState.count + 1}))
     }
 
     
@@ -101,4 +118,4 @@ class Counter extends React.Component {
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
-root.render(<Counter name="Botond" />);
+root.render(<App name="Botond" />);
