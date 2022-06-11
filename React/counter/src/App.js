@@ -1,51 +1,24 @@
-import CTA from './components/CTA'
-import {HOC} from './components/HOC'
-import {ExtraProp} from './components/ExtraProp'
-import {FavNum} from './components/FavNum'
+import Menu from './components/Menu'
+import Favorite from './components/Favorite'
+import Example from './components/Example'
 
-/*
-function App(props) {
-  console.log(props)
-
+export default function App() {
   return (
-    <>
-      <CTA>
-        <h1>CTA title</h1>
-        <p>
-          Note that the development build is not optimized.
-          To create a production build, use npm run build. 
-        </p>
-      </CTA>
-
-      <CTA position="right">
-        <p>
-          Note that the development build is not optimized.
-          To create a production build, use npm run build. 
-        </p>
-        <form>
-          <input type="email" placeholder="Enter email"></input>
-          <br />
-          <button>Submit</button>
-        </form>
-      </CTA>
-
-      <CTA>
-        <p>lorem ipsum</p>
-      </CTA>
-    </>
-  );
-}
-
-export default ExtraProp(App)
-*/
-
-function App(props) {
-
-  console.log(props)
-
-  return(
-    <h1>Hello {props.number}</h1>
+    <div>
+      <Menu />
+      <hr />
+      <Favorite />
+      <Example 
+        render={
+          (isNight) => {
+            return(
+              <h1>{isNight ? "Bravo six, going dark" : "Love the smell of napalm in the morning"}</h1>
+            )
+          }
+        } 
+      />
+    </div>
   )
 }
 
-export default FavNum(App)
+// export default FavNum(App)

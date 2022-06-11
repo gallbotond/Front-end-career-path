@@ -14,3 +14,14 @@ body {
     border-radius: 5px;
     margin: 1em;
 }
+
+a {
+    margin: 1em;
+}
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 5px;
+}
