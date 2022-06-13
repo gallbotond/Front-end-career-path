@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {ThemeContextConsumer} from '../themeContext'
 
 // export default class Header extends Component {

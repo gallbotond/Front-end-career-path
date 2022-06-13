@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {ThemeContextConsumer} from '../themeContext'
-import PropTypes from 'prop-types'
 
 // export default class Button extends Component {
 //     render() {
@@ -13,11 +12,11 @@ import PropTypes from 'prop-types'
 
 // Button.contextType = ThemeContext
 
-export default function Button(props) {
+export default function Button() {
     return (
-        <ThemeContextConsumer   Consumer>
-            {theme => (
-                <button className={`${theme}-theme`}>Switch theme</button>
+        <ThemeContextConsumer>
+            {context=> (
+                <button className={`${context.theme}-theme`} onClick={context.method}>Switch theme</button>
             )}
         </ThemeContextConsumer>
     )

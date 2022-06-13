@@ -14,7 +14,7 @@ export default class App extends React.Component {
   increment = () => this.setState(prevState => ({count: prevState.count + 1}))
 
   render() {
-    console.log("App just rendered")
+    // console.log("App just rendered")
     return (
       <div>
         {/* <Menu />
