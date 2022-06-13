@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 2em;
     font-family: 'Montserrat', cursive;
+    background-color: rgb(156, 156, 156);
 }
 
 .cta {
@@ -24,4 +25,19 @@ button {
     font-weight: bold;
     border: 2px solid black;
     border-radius: 5px;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+.light-theme {
+    background-color: whitesmoke;
+    color: #333;
+}
+
+h2 {
+    padding: .5em 1em;
+    border: 2px solid black;
 }

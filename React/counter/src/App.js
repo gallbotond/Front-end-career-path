@@ -4,6 +4,8 @@
 // import Grandparent from './components/Grandparent'
 // import { render } from '@testing-library/react'
 import React from 'react'
+import Button from './context/Button'
+import Header from './context/Header'
 
 export default class App extends React.Component { 
   state = {count: 0}
@@ -29,7 +31,8 @@ export default class App extends React.Component {
         <button onClick={this.increment}>+1</button>
         <Grandparent count={this.state.count} />
         <Grandparent /> */}
-
+        <Header />
+        <Button />
       </div>
     )
   }
