@@ -17,9 +17,9 @@ import ThemeContext from '../themeContext'
 export default function Header() {
 	return (
 		<ThemeContext.Consumer>
-			{({theme, name}) => (
+			{theme => (
 				<header className={`${theme}-theme`}>
-				<h2>Welcome, {name}, current theme: {theme === "dark" ? "dark" : "light"}</h2>
+				<h2>Welcome, current theme: {theme === "dark" ? "dark" : "light"}</h2>
 			</header>
 			)}
 		</ThemeContext.Consumer>

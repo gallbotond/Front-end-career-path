@@ -6,6 +6,7 @@
 import React from 'react'
 import Button from './context/Button'
 import Header from './context/Header'
+import ThemeContext from './themeContext'
 
 export default class App extends React.Component { 
   state = {count: 0}
@@ -32,7 +33,15 @@ export default class App extends React.Component {
         <Grandparent count={this.state.count} />
         <Grandparent /> */}
         <Header />
-        <Button />
+        <ThemeContext.Consumer>
+          {theme => (
+            <>
+              <Button theme={theme} />
+              <Button theme={theme} />
+            </>
+          )}
+        </ThemeContext.Consumer>
+        <Button theme="monkey" />
       </div>
     )
   }

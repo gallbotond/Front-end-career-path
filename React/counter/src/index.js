@@ -12,7 +12,7 @@ import ThemeContext from './themeContext';
 // );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ThemeContext.Provider value={{theme: "light", name: "Riley Simon"}}>
+  <ThemeContext.Provider value={"light"}>
     <App />
   </ThemeContext.Provider>
 )
