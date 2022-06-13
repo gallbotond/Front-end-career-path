@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ThemeContext from '../themeContext'
+import {ThemeContextConsumer} from '../themeContext'
 import PropTypes from 'prop-types'
 
 // export default class Button extends Component {
@@ -13,27 +13,27 @@ import PropTypes from 'prop-types'
 
 // Button.contextType = ThemeContext
 
-// export default function Button(props) {
-//     return (
-//         <ThemeContext.Consumer>
-//             {({theme}) => (
-//                 <button className={`${theme}-theme`}>Switch theme</button>
-//             )}
-//         </ThemeContext.Consumer>
-//     )
-// }
-
 export default function Button(props) {
-    console.log(props)
     return (
-        <button className={`${props.theme}-theme`}>Switch theme</button>
+        <ThemeContextConsumer   Consumer>
+            {theme => (
+                <button className={`${theme}-theme`}>Switch theme</button>
+            )}
+        </ThemeContextConsumer>
     )
 }
 
-Button.propTypes = {
-    theme: PropTypes.oneOf(["light", "dark"])
-}
+// export default function Button(props) {
+//     console.log(props)
+//     return (
+//         <button className={`${props.theme}-theme`}>Switch theme</button>
+//     )
+// }
 
-Button.defaultProps = {
-    theme: "light"
-}
+// Button.propTypes = {
+//     theme: PropTypes.oneOf(["light", "dark"])
+// }
+
+// Button.defaultProps = {
+//     theme: "light"
+// }

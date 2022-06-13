@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ThemeContext from './themeContext';
+import {ThemeContextProvider} from './themeContext';
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -12,9 +12,9 @@ import ThemeContext from './themeContext';
 // );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ThemeContext.Provider value={"light"}>
+  <ThemeContextProvider>
     <App />
-  </ThemeContext.Provider>
+  </ThemeContextProvider>
 )
 
 // If you want to start measuring performance in your app, pass a function

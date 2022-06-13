@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ThemeContext from '../themeContext'
+import {ThemeContextConsumer} from '../themeContext'
 
 // export default class Header extends Component {
 //     static contextType = ThemeContext
@@ -16,12 +16,12 @@ import ThemeContext from '../themeContext'
 
 export default function Header() {
 	return (
-		<ThemeContext.Consumer>
+		<ThemeContextConsumer>
 			{theme => (
 				<header className={`${theme}-theme`}>
-				<h2>Welcome, current theme: {theme === "dark" ? "dark" : "light"}</h2>
-			</header>
+					<h2>Welcome, current theme: {theme === "dark" ? "dark" : "light"}</h2>
+				</header>
 			)}
-		</ThemeContext.Consumer>
+		</ThemeContextConsumer>
 	)
 }
