@@ -1,8 +1,8 @@
-import Menu from './components/Menu'
-import Favorite from './components/Favorite'
-import Example from './components/Example'
-import Grandparent from './components/Grandparent'
-import { render } from '@testing-library/react'
+// import Menu from './components/Menu'
+// import Favorite from './components/Favorite'
+// import Example from './components/method-passing/Example'
+// import Grandparent from './components/Grandparent'
+// import { render } from '@testing-library/react'
 import React from 'react'
 
 export default class App extends React.Component { 
@@ -14,10 +14,10 @@ export default class App extends React.Component {
     console.log("App just rendered")
     return (
       <div>
-        <Menu />
+        {/* <Menu />
         <hr />
         <Favorite />
-        {/* <Example 
+        <Example 
           render={
             (isNight) => {
               return(
@@ -25,10 +25,11 @@ export default class App extends React.Component {
               )
             }
           } 
-        /> */}
+        />
         <button onClick={this.increment}>+1</button>
         <Grandparent count={this.state.count} />
-        <Grandparent />
+        <Grandparent /> */}
+
       </div>
     )
   }
