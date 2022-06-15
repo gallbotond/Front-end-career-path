@@ -17,9 +17,9 @@ import {ThemeContextConsumer} from '../themeContext'
 export default function Header() {
 	return (
 		<ThemeContextConsumer>
-			{theme => (
-				<header className={`${theme}-theme`}>
-					<h2>Welcome, current theme: {theme === "dark" ? "dark" : "light"}</h2>
+			{context => (
+				<header className={`${context.theme}-theme`}>
+					<h2>Welcome, current theme: {context.theme === "dark" ? "dark" : "light"}</h2>
 				</header>
 			)}
 		</ThemeContextConsumer>

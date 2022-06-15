@@ -16,7 +16,7 @@ export default function Button() {
     return (
         <ThemeContextConsumer>
             {context=> (
-                <button className={`${context.theme}-theme`} onClick={context.method}>Switch theme</button>
+                <button className={`${context.theme}-theme`} onClick={context.toggleMethod}>Switch theme</button>
             )}
         </ThemeContextConsumer>
     )
