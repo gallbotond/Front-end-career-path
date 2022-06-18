@@ -4,15 +4,15 @@ const {Provider, Consumer} = React.createContext()
 
 class UserContextProvider extends Component {
 
-    state = {username: ''}
+    state = {username: 'hello'}
 
     setUserName = (username) => {
-        this.setState({username: username})
+        this.setState({username})
     }
 
     render() {
         return (
-            <Provider value={{username: this.state.username, method: this.setUserName}}>
+            <Provider value={{username: this.state.username, setUserName: this.setUserName}}>
                 {this.props.children}
             </Provider>
         )

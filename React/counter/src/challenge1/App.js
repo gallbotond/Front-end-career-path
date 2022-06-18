@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from '../context/Header'
+import Header from './Header'
 import {UserContextConsumer} from './userContext'
 
 // export default function App() {
@@ -31,8 +31,8 @@ export default class App extends Component {
         name: ''
     }
 
-    handleChange = (name) => {
-        this.setState({name: name})
+    handleChange = (e) => {
+        this.setState({name: e.target.value})
     }
 
     handleClick = () => {
@@ -45,19 +45,21 @@ export default class App extends Component {
                 <Header />
                 <main>
                     <UserContextConsumer>
-                        {context => (
-                            <p className='main'>No new notifications, {context.username}! 🎊</p>
+                        {({username, setUserName}) => (
+                            <>
+                                <p className='main'>No new notifications, {username}! 🎊</p>
+                                <input
+                                    type='text'
+                                    name='name'
+                                    placeholder='New username'
+                                    value={this.state.name}
+                                    onChange={this.handleChange}
+                                />
+                                <button onClick={() => setUserName(this.state.name)}>Change Username</button>
+                            </>
                         )}
                     </UserContextConsumer>
                 </main>
-                <input
-                    type='text'
-                    name='username'
-                    placeholder='New username'
-                    value={this.state.name}
-                    onChange={this.handleChange}
-                />
-                <button onClick={this.handleClick}>Change Username</button>
             </div>
         )
     }

@@ -18,7 +18,8 @@ export default function Header() {
 	return (
 		<ThemeContextConsumer>
 			{context => (
-				<header className={`${context.theme}-theme`}>
+				<header className={`${context.theme ? context.theme : "dark"}-theme`}>
+				{/* <header> */}
 					<h2>Welcome, current theme: {context.theme === "dark" ? "dark" : "light"}</h2>
 				</header>
 			)}
