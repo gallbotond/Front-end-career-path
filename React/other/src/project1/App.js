@@ -10,22 +10,26 @@ export default function App() {
 
     const calculateWordCount = text => text.trim().split(' ').filter(word => word !== '').length
 
-    // const flipIsRunning = () => setIsRunning(!isRunning)
+    const resetGame = () => {
+        setWords('')
+        setIsRunning(true)
+        setTime(3)
+    }
 
     useEffect(() => {
         isRunning && time > 0 && setTimeout(() => setTime(time => time - 1), 1000)
         !time && setIsRunning(false)
     }, [time, isRunning])
 
-    console.log(isRunning)
+    // console.log(isRunning)
 
     return (
         <div>
             <h1>Speed typing game</h1>
-            <textarea onChange={handleChange} value={words} />
+            <textarea disabled={!isRunning} onChange={handleChange} value={words} />
             <h4>Remaining time: {time}s</h4>
-            <button onClick={() => setIsRunning(true)}>Start</button>
-            <h1>Word count: {calculateWordCount(words)}</h1>
+            <button className={isRunning ? 'inactive' : ''} onClick={time ? () => setIsRunning(true) : resetGame}>Start</button>
+            <h1>Word count: {!time ? calculateWordCount(words) : '...'}</h1>
         </div>
     )
 }

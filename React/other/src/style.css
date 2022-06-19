@@ -25,11 +25,19 @@ button {
 button:hover,
 button:active {
     border: 3px solid white;
+    color: white;
 }
 
-/* button:focus {
-    background-color: #006b00;
-} */
+.inactive {
+    background-color: grey;
+    color: rgb(65, 65, 65);
+}
+
+.inactive:hover, 
+.inactive:active {
+    border: 3px solid black;
+    color: rgb(65, 65, 65);
+}
 
 h1 {
     font-size: 20px;
