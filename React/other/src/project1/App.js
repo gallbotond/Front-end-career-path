@@ -1,10 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 export default function App() {
 
+    const REMAINING_TIME = 5
+
     const [words, setWords] = React.useState('')
-    const [time, setTime] = React.useState(3)
+    const [time, setTime] = React.useState(REMAINING_TIME)
     const [isRunning, setIsRunning] = React.useState(false)
+
+    const inputTextArea = useRef()
 
     const handleChange = e => setWords(e.target.value)
 
@@ -13,7 +17,8 @@ export default function App() {
     const resetGame = () => {
         setWords('')
         setIsRunning(true)
-        setTime(3)
+        setTime(REMAINING_TIME)
+        // inputTextArea.current.focus()
     }
 
     useEffect(() => {
@@ -26,7 +31,7 @@ export default function App() {
     return (
         <div>
             <h1>Speed typing game</h1>
-            <textarea disabled={!isRunning} onChange={handleChange} value={words} />
+            <textarea ref={inputTextArea} disabled={!isRunning} onChange={handleChange} value={words} />
             <h4>Remaining time: {time}s</h4>
             <button className={isRunning ? 'inactive' : ''} onClick={time ? () => setIsRunning(true) : resetGame}>Start</button>
             <h1>Word count: {!time ? calculateWordCount(words) : '...'}</h1>
