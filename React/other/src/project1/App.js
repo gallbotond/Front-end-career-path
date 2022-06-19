@@ -1,18 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function App() {
 
     const [words, setWords] = React.useState('')
+    const [time, setTime] = React.useState(3)
+    const [isRunning, setIsRunning] = React.useState(false)
 
     const handleChange = e => setWords(e.target.value)
+
+    const calculateWordCount = text => text.trim().split(' ').filter(word => word !== '').length
+
+    // const flipIsRunning = () => setIsRunning(!isRunning)
+
+    useEffect(() => {
+        isRunning && time > 0 && setTimeout(() => setTime(time => time - 1), 1000)
+        !time && setIsRunning(false)
+    }, [time, isRunning])
+
+    console.log(isRunning)
 
     return (
         <div>
             <h1>Speed typing game</h1>
             <textarea onChange={handleChange} value={words} />
-            <h4>Remaining time: 10s</h4>
-            <button>Start</button>
-            <h1>Word count: 12</h1>
+            <h4>Remaining time: {time}s</h4>
+            <button onClick={() => setIsRunning(true)}>Start</button>
+            <h1>Word count: {calculateWordCount(words)}</h1>
         </div>
     )
 }
