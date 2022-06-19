@@ -28,15 +28,10 @@ button:active {
     color: white;
 }
 
-.inactive {
+button:disabled {
     background-color: grey;
     color: rgb(65, 65, 65);
-}
-
-.inactive:hover, 
-.inactive:active {
     border: 3px solid black;
-    color: rgb(65, 65, 65);
 }
 
 h1 {
@@ -53,4 +48,11 @@ textarea {
     height: 200px;
     background: #00b800;
     padding: 10px;
+}
+
+input {
+    font-family: inherit;
+    background-color: rgb(195, 231, 186);
+    border: 3px solid #00b800;
+    padding: .5em;
 }
