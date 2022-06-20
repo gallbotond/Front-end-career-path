@@ -56,3 +56,13 @@ input {
     border: 3px solid #00b800;
     padding: .5em;
 }
+
+.dark-theme {
+    color: aliceblue;
+    background-color: black;
+}
+
+.light-theme {
+    color: green;
+    background-color: aliceblue;
+}
