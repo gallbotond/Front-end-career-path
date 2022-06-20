@@ -48,6 +48,7 @@ textarea {
     height: 200px;
     background: #00b800;
     padding: 10px;
+    max-width: 500px;
 }
 
 input {
@@ -65,4 +66,8 @@ input {
 .light-theme {
     color: green;
     background-color: aliceblue;
+}
+
+div {
+    margin: 4em;
 }

@@ -17,12 +17,12 @@ export default function App() {
         inputRef.current.focus()
     }
 
-    const allTodos = todos.map(todo => <p key={todo}>{todo}</p>)
+    const allTodos = todos.map((todo, i) => <p key={i}>{todo}</p>)
 
     return (
         <div>
             <form>
-                <textarea ref={inputRef} type='text' name='todo' value={newValue} onChange={handleChange} />
+                <input ref={inputRef} type='text' name='todo' value={newValue} onChange={handleChange} />
                 <button onClick={addTodo}>Add todo item</button>
             </form>
             {allTodos}
