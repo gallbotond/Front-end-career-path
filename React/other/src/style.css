@@ -71,3 +71,7 @@ input {
 div {
     margin: 4em;
 }
+
+nav > * {
+    margin: 1em;
+}
