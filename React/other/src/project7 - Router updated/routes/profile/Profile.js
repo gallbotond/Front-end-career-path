@@ -4,10 +4,10 @@ import { Link, Outlet } from 'react-router-dom'
 export default function profile() {
   return (
     <div>
-      <nav>
-        <Link to='/profile/info'>Info</Link>
-        <Link to='/profile/settings'>Settings</Link>
-      </nav>
+      <ul>
+        <li><Link to='/profile/info'>Info</Link></li>
+        <li><Link to='/profile/settings'>Settings</Link></li>
+      </ul>
       <Outlet />
     </div>
   )

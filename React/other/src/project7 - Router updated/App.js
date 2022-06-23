@@ -6,7 +6,7 @@ export default function App() {
     <div>
       <nav>
         <h1>Welcome</h1>
-        <Link to='/'>Home</Link> | {""}
+        <Link to='/home'>Home</Link> | {""}
         <Link to='/profile'>Profile</Link> | {""}
         <Link to='/contact'>Contact</Link>
       </nav>
