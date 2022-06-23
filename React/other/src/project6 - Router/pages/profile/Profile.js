@@ -1,5 +1,6 @@
 import React from 'react'
-import {Link, Routes, Route} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 import Settings from './Settings'
 import Info from './Info'

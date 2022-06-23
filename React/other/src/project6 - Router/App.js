@@ -20,7 +20,7 @@ export default function App() {
         <Route exact path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
-        <Route path='/profile' element={<Profile />}></Route>
+        <Route exact path='/profile' element={<Profile />}></Route>
       </Routes>
     </div>
   )
