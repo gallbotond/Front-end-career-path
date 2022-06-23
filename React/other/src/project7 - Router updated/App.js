@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Outlet} from 'react-router-dom'
 
 export default function App() {
   return (
@@ -10,6 +10,7 @@ export default function App() {
         <Link to='/profile'>Profile</Link> | {""}
         <Link to='/contact'>Contact</Link>
       </nav>
+      <Outlet />
     </div>
   )
 }

@@ -1,7 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { getInvoices } from '../src/data'
 
 export default function Contact() {
+  let invoices = getInvoices()
   return (
-    <div>Contact</div>
+    <div>
+      {/* {invoices.map(invoice => <Link to={`/profile/${invoice.number}`} key={invoice.number}>{invoice.name}</Link>)} */}
+    </div>
   )
 }
