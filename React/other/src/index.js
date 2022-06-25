@@ -10,7 +10,9 @@ import Contact from './project7 - Router updated/routes/contact/Contact'
 import Info from './project7 - Router updated/routes/profile/Info'
 import Settings from './project7 - Router updated/routes/profile/Settings'
 import Home from './project7 - Router updated/routes/Home'
-import Invoice from './project7 - Router updated/routes/contact/Invoice'
+// import Invoice from './project7 - Router updated/routes/contact/Invoice.jsx'
+import Invoice from './project7 - Router updated/routes/invoices/invoice';
+import Invoices from './project7 - Router updated/routes/invoices/invoices';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,14 +21,17 @@ root.render(
     <Router>
       <Routes>
         <Route path='/' element={<App />}>
-          <Route path='/home' element={<Home />} />
-          <Route path='/profile' element={<Profile />}>
+          <Route path='home' element={<Home />} />
+          <Route path='profile' element={<Profile />}>
             <Route path='/profile/info' element={<Info />} />
             <Route path='/profile/settings' element={<Settings />} />
           </Route>
-          <Route path='/contact' element={<Contact />}>
-            <Route path=':invoiceID' element={<Invoice />} />
+          <Route path="invoices" element={<Invoices />}>
+            <Route path=":invoiceId" element={<Invoice />} />
           </Route>
+          {/* <Route path='contact' element={<Contact />}>
+            <Route path=":invoiceID" element={<Invoice />} />
+          </Route> */}
         </Route>
         <Route path='*' element={<main><p>There's nothing here!</p></main>} />
       </Routes>
