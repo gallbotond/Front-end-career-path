@@ -10,14 +10,6 @@ export default function App() {
         <Link to='/home'>HOME</Link>
         <Link to='/products'>PRODUX</Link>
       </nav>
-
-      <BrowserRouter>
-        <Route path='/' element={<App />}>
-          <Route path='/products' element={<Products />}>
-            <Route path='/products/:id' element={<Product />} />
-          </Route>
-        </Route>
-      </BrowserRouter>
     </div>
   )
 }

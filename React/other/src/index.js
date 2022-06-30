@@ -42,12 +42,12 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from './project8 - Router Practice/App'
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
+// import App from './project8 - Router Practice/App'
+import {
+  BrowserRouter,
+  // Routes,
+  Route,
+} from "react-router-dom";
 // import App from "./project7 - Router tutorial remade/App";
 // import Expenses from "./project7 - Router tutorial remade/routes/expenses"
 // import Invoice from "./project7 - Router tutorial remade/routes/invoice";
@@ -71,4 +71,16 @@ const root = ReactDOM.createRoot(
 //   </BrowserRouter>
 // );
 
-root.render(<App />)
+import App from './project8 - Router Practice/App'
+import Product from './project8 - Router Practice/routes/Product'
+import Products from './project8 - Router Practice/routes/Product'
+
+root.render(
+  <BrowserRouter>
+    <Route path='/' element={<App />}>
+      <Route path='/products' element={<Products />}>
+        <Route path='/products/:id' element={<Product />} />
+      </Route>
+    </Route>
+  </BrowserRouter>
+)
