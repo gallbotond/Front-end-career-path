@@ -45,9 +45,13 @@ import ReactDOM from "react-dom/client";
 // import App from './project8 - Router Practice/App'
 import {
   BrowserRouter,
-  // Routes,
+  Routes,
   Route,
 } from "react-router-dom";
+
+import App from './project8 - Router Practice/App'
+import Product from './project8 - Router Practice/routes/Product'
+import Products from './project8 - Router Practice/routes/Product'
 // import App from "./project7 - Router tutorial remade/App";
 // import Expenses from "./project7 - Router tutorial remade/routes/expenses"
 // import Invoice from "./project7 - Router tutorial remade/routes/invoice";
@@ -69,18 +73,16 @@ const root = ReactDOM.createRoot(
 //       </Route>
 //     </Routes>
 //   </BrowserRouter>
-// );
-
-import App from './project8 - Router Practice/App'
-import Product from './project8 - Router Practice/routes/Product'
-import Products from './project8 - Router Practice/routes/Product'
+// );'
 
 root.render(
   <BrowserRouter>
+  <Routes>
     <Route path='/' element={<App />}>
       <Route path='/products' element={<Products />}>
         <Route path='/products/:id' element={<Product />} />
       </Route>
     </Route>
+  </Routes>
   </BrowserRouter>
 )
