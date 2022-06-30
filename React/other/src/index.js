@@ -42,30 +42,33 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import App from "./project7 - Router tutorial remade/App";
-import Expenses from "./project7 - Router tutorial remade/routes/expenses"
-import Invoice from "./project7 - Router tutorial remade/routes/invoice";
-import Invoices from "./project7 - Router tutorial remade/routes/invoices";
+import App from './project8 - Router Practice/App'
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
+// import App from "./project7 - Router tutorial remade/App";
+// import Expenses from "./project7 - Router tutorial remade/routes/expenses"
+// import Invoice from "./project7 - Router tutorial remade/routes/invoice";
+// import Invoices from "./project7 - Router tutorial remade/routes/invoices";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
-root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route path="expenses" element={<Expenses />} />
-        <Route path="invoices" element={<Invoices />}>
-          <Route index element={<main><p>Select an invoice</p></main>} />
-          <Route path=":invoiceID" element={<Invoice />} />
-        </Route>
-        <Route path="*" element={<main><p>There's nothing here!</p></main>} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
-);
+// root.render(
+//   <BrowserRouter>
+//     <Routes>
+//       <Route path="/" element={<App />}>
+//         <Route path="expenses" element={<Expenses />} />
+//         <Route path="invoices" element={<Invoices />}>
+//           <Route index element={<main><p>Select an invoice</p></main>} />
+//           <Route path=":invoiceID" element={<Invoice />} />
+//         </Route>
+//         <Route path="*" element={<main><p>There's nothing here!</p></main>} />
+//       </Route>
+//     </Routes>
+//   </BrowserRouter>
+// );
+
+root.render(<App />)
