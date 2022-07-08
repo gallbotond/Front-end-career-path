@@ -79,9 +79,10 @@ root.render(
   <BrowserRouter>
   <Routes>
     <Route path='/' element={<App />}>
-      <Route path='/products' element={<Products />}>
-        <Route path='/products/:id' element={<Product />} />
+      <Route path='products' element={<Products />}>
+        <Route path=':product' element={<Product />} />
       </Route>
+      <Route path='*' element={<p>There is no route here!</p>} />
     </Route>
   </Routes>
   </BrowserRouter>
