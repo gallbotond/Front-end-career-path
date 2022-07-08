@@ -27,3 +27,8 @@ header {
 h2 {
   margin: 0;
 }
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
