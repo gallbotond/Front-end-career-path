@@ -3,11 +3,14 @@ import './assets/style.css'
 import { BrowserRouter } from 'react-router-dom'
 
 import PhotoApp from './App'
+import { CustomContextProvider } from './context/customContext'
 
 export default function App() {
   return(
-    <BrowserRouter>
-      <PhotoApp />
-    </BrowserRouter>  
+    <CustomContextProvider>
+      <BrowserRouter>
+        <PhotoApp />
+      </BrowserRouter>  
+    </CustomContextProvider>
   )
 }

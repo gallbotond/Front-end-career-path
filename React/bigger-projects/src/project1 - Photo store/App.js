@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet, Route, Routes } from 'react-router-dom'
 
 import Header from './components/Header'
+import { CustomContextProvider } from './context/customContext'
 import Cart from './pages/Cart'
 import Home from './pages/Home'
 import Photos from './pages/Photos'

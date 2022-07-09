@@ -21,7 +21,12 @@ header {
   max-width: var(--container-width);
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
+}
+
+.icon-container {
+  display: flex;
+  gap: 1em;
 }
 
 h2 {
