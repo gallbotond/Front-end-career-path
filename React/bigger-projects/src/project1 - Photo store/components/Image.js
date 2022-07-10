@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Image({className}) {
+export default function Image({className, img}) {
   return (
     <div className={`image-container ${className}`}>
-      <img src={} className='image-grid' />
+      <img src={img.url} className='image-grid' />
     </div>
   )
 }

@@ -13,6 +13,8 @@ function CustomContextProvider(props) {
       .then(data => setPictures(data))
   }, [])
 
+  console.log(pictures)
+
   return (
     <CustomContext.Provider value={{pictures}}>
       {props.children}
