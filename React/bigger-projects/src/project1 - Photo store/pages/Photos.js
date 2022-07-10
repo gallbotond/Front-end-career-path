@@ -9,14 +9,11 @@ export default function Photos() {
   const {pictures} = useContext(CustomContext)
 
   return (
-    <main className='photos'>
-      <div className='container'>
-        <h1>Images go here</h1>
+      <main className='photos'>
         {pictures.map((picture, index) => 
           <Image key={picture.id} img={picture} className={getClass(index)} />
         )}
-      </div>
-    </main>
+      </main>
   )
 }
  
