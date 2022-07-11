@@ -71,3 +71,15 @@ img.image-grid {
   grid-column: span 2;
   grid-row: span 2;
 }
+
+.inside-image {
+  position: absolute;
+  bottom: 5px;
+  right: 5px
+}
+
+.inside-image > * {
+  color: white;
+  margin: .2em;
+  text-shadow: 0 0 5px black;
+}

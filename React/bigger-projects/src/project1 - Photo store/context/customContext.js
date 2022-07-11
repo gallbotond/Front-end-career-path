@@ -13,10 +13,23 @@ function CustomContextProvider(props) {
       .then(data => setPictures(data))
   }, [])
 
-  console.log(pictures)
+  const toggleFavorite = id => {
+    const newPictures = pictures.map(image => {
+      if(image.id === id) {
+        console.log(id, !image.isFavorite)
+        return {
+          ...image,
+          isFavorite: !image.isFavorite
+        }
+      }
+      return image
+    })
+
+    setPictures(newPictures)
+  }
 
   return (
-    <CustomContext.Provider value={{pictures}}>
+    <CustomContext.Provider value={{pictures, toggleFavorite}}>
       {props.children}
     </CustomContext.Provider>
   )
