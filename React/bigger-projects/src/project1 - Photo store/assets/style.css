@@ -55,6 +55,15 @@ img.image-grid {
     object-fit: cover;
 }
 
+img {
+  border: 0px solid white;
+  transition: .2s;
+}
+
+.image-container:hover img {
+  border: 3px solid white;
+}
+
 .image-container {
     position: relative;
 }
@@ -74,8 +83,14 @@ img.image-grid {
 
 .inside-image {
   position: absolute;
+  bottom: -10px;
+  right: 5px;
+}
+
+.image-container:hover .inside-image {
   bottom: 5px;
-  right: 5px
+  right: 5px;
+  transition: .2s;
 }
 
 .inside-image > * {
