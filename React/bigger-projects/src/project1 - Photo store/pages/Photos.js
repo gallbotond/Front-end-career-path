@@ -8,7 +8,7 @@ export default function Photos() {
   const { pictures } = useContext(CustomContext);
 
   return (
-    <main className="photos">
+    <main className="photos container">
       {pictures.map((picture, index) => (
         <Image key={picture.id} img={picture} className={getClass(index)} />
       ))}
