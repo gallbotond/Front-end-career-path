@@ -1,38 +1,48 @@
-import React, { useEffect }  from "react"
-import { useState } from "react"
+import React, { useEffect } from "react";
+import { useState } from "react";
 
-const CustomContext = React.createContext()
+const CustomContext = React.createContext();
 
 function CustomContextProvider(props) {
-
-  const [pictures, setPictures] = useState([])
+  const [pictures, setPictures] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json')
-      .then(res => res.json())
-      .then(data => setPictures(data))
-  }, [])
+    fetch(
+      "https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json"
+    )
+      .then((res) => res.json())
+      .then((data) => setPictures(data));
+  }, []);
 
-  const toggleFavorite = id => {
-    const newPictures = pictures.map(image => {
-      if(image.id === id) {
-        console.log(id, !image.isFavorite)
+  const toggleFavorite = (id) => {
+    const newPictures = pictures.map((image) => {
+      if (image.id === id) {
+        // console.log(id, !image.isFavorite)
         return {
           ...image,
-          isFavorite: !image.isFavorite
-        }
+          isFavorite: !image.isFavorite,
+        };
       }
-      return image
-    })
+      return image;
+    });
 
-    setPictures(newPictures)
-  }
+    setPictures(newPictures);
+  };
+
+  const addToCart = img => setCartItems(prev => [...prev, img])
+
+  const removeFromCart = img => setCartItems(prev => prev.filter(item => item.id != img.id))
+
+  console.log(cartItems);
 
   return (
-    <CustomContext.Provider value={{pictures, toggleFavorite}}>
+    <CustomContext.Provider
+      value={{ pictures, toggleFavorite, addToCart, removeFromCart, cartItems }}
+    >
       {props.children}
     </CustomContext.Provider>
-  )
+  );
 }
 
-export {CustomContext, CustomContextProvider}
+export { CustomContext, CustomContextProvider };
