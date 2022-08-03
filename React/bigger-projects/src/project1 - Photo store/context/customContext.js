@@ -30,11 +30,10 @@ function CustomContextProvider(props) {
     setPictures(newPictures);
   };
 
-  const addToCart = img => setCartItems(prev => [...prev, img])
+  const addToCart = (img) => setCartItems((prev) => [...prev, img]);
 
-  const removeFromCart = img => setCartItems(prev => prev.filter(item => item.id != img.id))
-
-  console.log(cartItems);
+  const removeFromCart = (img) =>
+    setCartItems((prev) => prev.filter((item) => item.id != img.id));
 
   return (
     <CustomContext.Provider
