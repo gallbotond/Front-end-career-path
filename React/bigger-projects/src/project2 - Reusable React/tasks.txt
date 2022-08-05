@@ -1,0 +1,5 @@
+Turn the Login and Signup into controlled components
+Make just one form show at a time
+Make the buttons toggle which component is rendered
+Forward the ref from the ToggleableForm to the components
+Make a form's first input toggled when it is active using a side effect.

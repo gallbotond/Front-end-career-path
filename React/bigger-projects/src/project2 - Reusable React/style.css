@@ -1,0 +1,29 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: orange;
+}
+
+.blue {
+  background-color: skyblue;
+}
+
+.badge {
+  padding: 0.3em;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
