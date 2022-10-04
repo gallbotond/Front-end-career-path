@@ -1,5 +1,6 @@
 import React from "react";
 import LoginApp from "./components/LoginApp";
+import CharacterPicker from "./components/CharacterPicker";
 import './style.css'
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
 
   return (
     <section>
+      <CharacterPicker />
       <h1>Check out these badges!</h1>
       <Badge color="green">Success</Badge> This is operational. <br />
       <Badge color="red">Removed</Badge> This is critical. <br />

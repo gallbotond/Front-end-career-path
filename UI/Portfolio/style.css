@@ -404,6 +404,7 @@ header {
 .portfolio__item:focus {
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 .portfolio__img {
